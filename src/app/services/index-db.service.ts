@@ -28,7 +28,7 @@ export class IndexDBService {
   }
 
   clearDatabase() {
-    return this.db.clear("data-store");
+    return this.db.clear('data-store');
   }
 
   async getData(key: string) {
