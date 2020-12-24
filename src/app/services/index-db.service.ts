@@ -27,6 +27,10 @@ export class IndexDBService {
     return this.db.put('data-store', value, key);
   }
 
+  clearDatabase() {
+    return this.db.clear("data-store");
+  }
+
   async getData(key: string) {
     this.db = await openDB<MyDB>('my-db', 1, {
       upgrade(db) {
