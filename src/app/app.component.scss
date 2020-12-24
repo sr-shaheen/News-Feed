@@ -1,32 +1,6 @@
 .spacer {
     flex: 1;
   }
-  .toolbarOld {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    color: white;
-    border-bottom: 1px solid crimson;
-    z-index: 2;
-  }
-  
-  .toolbarOld img {
-    // margin: 0 16px;
-    margin-left: 16px;
-  }
-  
-  .toolbarOld #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-  
-  .toolbarOld #twitter-logo:hover {
-    opacity: 0.8;
-  }
   
   .topnav {
     background-color: #4caf50;
@@ -57,24 +31,7 @@
     color: white;
   }
   
-  .footer {
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #d82121;
-    color: #13a50e;
-  }
-  
-  .footer>div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    font-size: 12.5px;
-    font-weight: bold;
-  }
+
   
   
   //new added
@@ -87,27 +44,34 @@
     left: 0;
     right: 0;
   }
-  .card {
-    height: calc(100vh - 85px);
-    padding: 0 !important;
+
+  
+  // .mat-toolbar-multiple-rows {
+  //   min-height: unset;
+  // }
+  
+  // .mat-toolbar-row {
+  //   height: 45px;
+  // }
+  
+  .example-card {
+    max-width: 250px;
     overflow-y: auto;
-  }
-  .card-auth {
-    height: calc(120vh - 85px);
-    padding: 0 !important;
-    overflow-y: auto;
+    margin: auto;
   }
   
-  .mat-toolbar-multiple-rows {
-    min-height: unset;
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
   }
-  
-  .mat-toolbar-row {
-    height: 45px;
+
+  .tab{
+    margin-top: 130px;
   }
   
   
   
-  
-  
+  .tt{
+    margin-bottom: 10px !important;
+  }
   

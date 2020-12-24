@@ -11,6 +11,7 @@ import { IndexDBService } from './services/index-db.service';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'newsFeed';
   serviceSub: Subscription;
+  items: any;
 
   constructor(
     private service: DeveloperHttpService,
@@ -40,7 +41,7 @@ export class AppComponent implements OnInit, OnDestroy {
             console.log(res, 'saved');
           })
           .catch((err) => console.log(err, 'error'));
-        // this.newsData = [...results[0], ...results[1]];
+          this.items=results[0]
       }
     );
   }

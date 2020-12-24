@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -32,12 +32,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule } from '@angular/material/badge';
 
-import {CdkTableModule} from '@angular/cdk/table';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {CdkTreeModule} from '@angular/cdk/tree';
-
+import { CdkTableModule } from '@angular/cdk/table';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -45,6 +45,7 @@ import {CdkTreeModule} from '@angular/cdk/tree';
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -86,6 +87,7 @@ import {CdkTreeModule} from '@angular/cdk/tree';
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
