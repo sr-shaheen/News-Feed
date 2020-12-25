@@ -9,10 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { NewsComponent } from './news/news.component';
+import { NewsDetailsComponent } from './news-details/news-details.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NewsComponent],
+  declarations: [AppComponent, NewsComponent, NewsDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,5 +23,6 @@ import { NewsComponent } from './news/news.component';
   ],
   providers: [IndexDBService, DeveloperHttpService],
   bootstrap: [AppComponent],
+  entryComponents:[NewsDetailsComponent]
 })
 export class AppModule {}

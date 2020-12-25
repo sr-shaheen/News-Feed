@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { NewsDetailsComponent } from '../news-details/news-details.component';
 import { IndexDBService } from '../services/index-db.service';
 
 @Component({
@@ -10,7 +12,11 @@ import { IndexDBService } from '../services/index-db.service';
 export class NewsComponent implements OnInit {
   items: any;
   defaultImage = '/assets/nytimes.jpg';
-  constructor(private iDB: IndexDBService, private router: Router) {
+  constructor(
+    private iDB: IndexDBService,
+    private router: Router,
+    public dialog: MatDialog
+  ) {
     console.log(this.router.url);
   }
 
@@ -39,5 +45,17 @@ export class NewsComponent implements OnInit {
       .catch((err) => {
         this.items = [];
       });
+  }
+
+  newsDetailsModal(news): void {
+    const dialogRef = this.dialog.open(NewsDetailsComponent, {
+      width: '900px',
+      height: '500px',
+      data: news,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }
