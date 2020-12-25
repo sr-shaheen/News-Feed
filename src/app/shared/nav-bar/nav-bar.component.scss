@@ -1,12 +1,15 @@
-
 .example-spacer {
-    flex: 1 1 auto;
-  }
-  
-  
-  .app-toolbar {
-    position: fixed;
-    position: -webkit-sticky; /* For macOS/iOS Safari */
-    top: 0; /* Sets the sticky toolbar to be on top */
-    z-index: 1000;
-  }
+  flex: 1 1 auto;
+}
+
+.app-toolbar {
+  position: fixed;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+}
+
+.app-toolbar button.active {
+  background-color: #fdb827;
+  color: black;
+}

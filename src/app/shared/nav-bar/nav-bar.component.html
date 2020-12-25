@@ -5,19 +5,19 @@
         </button>
         <span>News Feed</span>
         <span class="example-spacer"></span>
-        <button routerLink='/home' mat-button>
+        <button routerLink='/home' mat-button [routerLinkActive]="['active']">
             Home
         </button>
-        <button routerLink='/world' mat-button>
+        <button routerLink='/world' mat-button [routerLinkActive]="['active']">
             World
         </button>
-        <button routerLink='/us' mat-button>
+        <button routerLink='/us' mat-button [routerLinkActive]="['active']">
             US
         </button>
-        <button routerLink='/science' mat-button>
+        <button routerLink='/science' mat-button [routerLinkActive]="['active']">
             Science
         </button>
-        <button routerLink='/arts' mat-button>
+        <button routerLink='/arts' mat-button [routerLinkActive]="['active']">
             Arts
         </button>
     </mat-toolbar>
