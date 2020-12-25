@@ -20,12 +20,12 @@
   height: 100%;
 }
 .typoTitle {
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px 15px;
 }
 .typoBody {
   height: 260px;
   overflow-y: auto;
-  margin: 10px 0px 10px 10px;
+  margin: 10px 0px 10px 15px;
 }
 .date {
   color: gray;
@@ -40,4 +40,7 @@
 
 .text {
   text-align: justify !important;
+}
+.text-color {
+  color: #000000c4;
 }
