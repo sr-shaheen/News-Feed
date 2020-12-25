@@ -7,6 +7,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./news-details.component.scss'],
 })
 export class NewsDetailsComponent implements OnInit {
+
+  defaultImage = '/assets/nytimes.jpg';
   constructor(
     public dialogRef: MatDialogRef<NewsDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any

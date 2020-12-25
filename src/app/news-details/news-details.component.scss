@@ -1,1 +1,43 @@
+.container {
+  width: 100%;
+  height: 90%;
+}
+.imageContainer {
+  float: left;
+  width: 40%;
+  background-color: blueviolet;
+  height: 100%;
+}
 
+.imageContainer img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.detailContainer {
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+.typoTitle {
+  margin: 0px 0px 0px 10px;
+}
+.typoBody {
+  height: 260px;
+  overflow-y: auto;
+  margin: 10px 0px 10px 10px;
+}
+.date {
+  color: gray;
+  font-weight: lighter;
+}
+
+.material-icons {
+  // vertical-align: middle;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.text {
+  text-align: justify !important;
+}

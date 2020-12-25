@@ -16,15 +16,12 @@ export class NewsComponent implements OnInit {
     private iDB: IndexDBService,
     private router: Router,
     public dialog: MatDialog
-  ) {
-    console.log(this.router.url);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.iDB
       .getData('news')
       .then((res) => {
-        console.log(res);
         if (
           this.router.url.split('/')[1] === '' ||
           this.router.url.split('/')[1] === 'home'
@@ -50,7 +47,7 @@ export class NewsComponent implements OnInit {
   newsDetailsModal(news): void {
     const dialogRef = this.dialog.open(NewsDetailsComponent, {
       width: '900px',
-      height: '500px',
+      height: '450px',
       data: news,
     });
 

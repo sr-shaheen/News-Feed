@@ -33,7 +33,6 @@ export class AppComponent implements OnInit, OnDestroy {
           science: results[3],
           arts: results[4],
         };
-        console.log(dataFormet, 'ppppppp');
 
         this.iDB
           .addData(dataFormet, 'news')
@@ -41,7 +40,7 @@ export class AppComponent implements OnInit, OnDestroy {
             console.log(res, 'saved');
           })
           .catch((err) => console.log(err, 'error'));
-          this.items=results[0]
+        this.items = results[0];
       }
     );
   }
