@@ -1,45 +1,42 @@
 <!-- Toolbar -->
 <div>
-  <div id="container">
-    <mat-toolbar class="toolbar">
-      <mat-toolbar-row style="height: 120px;">
-
-        <span class="spacer"></span>
-        <div class="topnav">
-          <a [routerLink]="['/']" [routerLinkActive]="['active']">Home</a>
-          <a [routerLink]="['/orders']" [routerLinkActive]="['active']">World</a>
-          <a [routerLink]="['/customer']" [routerLinkActive]="['active']">US</a>
-          <a [routerLink]="['/maps']" [routerLinkActive]="['active']">Science</a>
-          <a [routerLink]="['/maps']" [routerLinkActive]="['active']">Arts</a>
-        </div>
-        <span class="spacer"></span>
-
-
-      </mat-toolbar-row>
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>rss_feed</mat-icon>
+      </button>
+      <span>News Feed</span>
+      <span class="example-spacer"></span>
+      <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Home
+      </button>
+      <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        US
+      </button>
+      <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Science
+      </button>
+      <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Arts
+      </button>
     </mat-toolbar>
-  </div>
+  </p>
 
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" class="tab">
     <div fxLayout="row wrap" fxLayoutGap="10px" fxFlex="100%" fxFlex.sm="50%" fxLayout.lt-sm="column" fxFlex.xs="100%"
-      fxLayoutAlign="flex-start">
-      <mat-card class="tt" fxFlex="0 1 calc(33% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%" fxFlex.xs="100%" *ngFor="let item of items">
-        <mat-card-header>
-          <mat-card-title style="font-size: 15px;">{{item?.title}}
-          </mat-card-title>
-        </mat-card-header>
-        <img style="min-height: 150px; max-height: 150px;" mat-card-image [src]="item?.multimedia[0]?.url"
-          alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <!-- <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p> -->
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>Details</button>
-        </mat-card-actions>
-      </mat-card>
+      fxLayoutAlign="space-around start">
+
+      <div class="card" fxFlex="0 1 calc(22% - 20px)" fxFlex.lt-md="0 1 calc(50% - 20px)" fxFlex.lt-sm="100%"
+        fxFlex.xs="100%" *ngFor="let item of items">
+        <img [src]="item?.multimedia[0]?.url" alt="Avatar" style="width:100%;min-height: 300px;max-height: 300px;">
+        <div class="containers">
+          <h4><b>{{item?.title}}</b></h4>
+          <div style="display: flex;">
+            <div style="flex: 1;"></div>
+            <button style="margin-bottom: 10px;" mat-raised-button color="primary">Details</button>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
