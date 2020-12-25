@@ -38,6 +38,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   imports: [
@@ -123,8 +124,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CdkTableModule,
     CdkTreeModule,
     DragDropModule,
+    NavBarComponent
   ],
-  declarations: [],
+  declarations: [NavBarComponent],
   entryComponents: [],
   providers: [],
 })

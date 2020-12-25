@@ -8,19 +8,8 @@
   right: 0;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
-}
-
 .tab {
   margin-top: 100px;
-}
-
-.app-toolbar {
-  position: fixed;
-  position: -webkit-sticky; /* For macOS/iOS Safari */
-  top: 0; /* Sets the sticky toolbar to be on top */
-  z-index: 1000;
 }
 
 .card {
