@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { NewsComponent } from './news/news.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NewsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

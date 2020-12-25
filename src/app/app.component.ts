@@ -28,10 +28,10 @@ export class AppComponent implements OnInit, OnDestroy {
       (results) => {
         let dataFormet = {
           home: results[0],
-          wrold: results[1],
+          world: results[1],
           us: results[2],
           science: results[3],
-          art: results[4],
+          arts: results[4],
         };
         console.log(dataFormet, 'ppppppp');
 

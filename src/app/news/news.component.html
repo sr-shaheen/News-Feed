@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" class="tab">
+    <div fxLayout="row wrap" fxLayoutGap="10px" fxFlex="100%" fxFlex.sm="50%" fxLayout.lt-sm="column" fxFlex.xs="100%"
+        fxLayoutAlign="space-around start">
+
+        <div class="card" fxFlex="0 1 calc(22% - 20px)" fxFlex.lt-md="0 1 calc(50% - 20px)" fxFlex.lt-sm="100%"
+            fxFlex.xs="100%" *ngFor="let item of items">
+            <img [src]="item?.multimedia[0]?.url?item?.multimedia[0]?.url:defaultImage" alt="News Photo"
+                style="width:100%;min-height: 300px;max-height: 300px;">
+            <div class="containers">
+                <h4><b>{{item?.title}}</b></h4>
+                <div style="display: flex;">
+                    <div style="flex: 1;"></div>
+                    <button style="margin-bottom: 10px;" mat-raised-button color="primary">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
