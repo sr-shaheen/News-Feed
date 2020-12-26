@@ -49,6 +49,7 @@ export class NewsComponent implements OnInit {
       width: '900px',
       height: '450px',
       data: news,
+      panelClass:'icon-outside',
     });
 
     dialogRef.afterClosed().subscribe((result) => {

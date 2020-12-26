@@ -18,11 +18,12 @@
   float: left;
   width: 60%;
   height: 100%;
+  margin-top: -37px;
 }
-.typoTitle {
+.typeTitle {
   margin: 0px 0px 0px 15px;
 }
-.typoBody {
+.typeBody {
   height: 260px;
   overflow-y: auto;
   margin: 10px 0px 10px 15px;
@@ -30,6 +31,11 @@
 .date {
   color: gray;
   font-weight: lighter;
+}
+.createdBy {
+  color: gray;
+  font-weight: lighter;
+  text-align: right;
 }
 
 .material-icons {
@@ -43,4 +49,30 @@
 }
 .text-color {
   color: #000000c4;
+}
+
+.close-button {
+  float: right;
+  top: -24px;
+  right: -24px;
+}
+
+.close-icon {
+  transition: 0.5s ease-in-out;
+  color: white;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+
+::ng-deep .icon-outside .close-button {
+  float: right;
+  top: -44px;
+  right: -44px;
+  background-color: #fc4c17;
+}
+
+::ng-deep .icon-outside .mat-dialog-container {
+  overflow: unset;
 }

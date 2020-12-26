@@ -1,22 +1,22 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon">close</mat-icon>
+</button>
+
 <div class="container">
     <div class="imageContainer">
         <img [src]='data?.multimedia[0]?.url?data?.multimedia[0]?.url:defaultImage' />
     </div>
     <div class="detailContainer">
-        <div class="typoTitle">
+        <div class="typeTitle">
             <div class="mat-title text">{{data?.title}}</div>
             <p class="date">
                 <mat-icon>timer</mat-icon> {{data?.created_date | date :'short'}}
             </p>
         </div>
         <mat-divider></mat-divider>
-        <div class="typoBody">
-            <p class="mat-body-2 text text-color">{{data?.abstract}}</p>
+        <div class="typeBody">
+            <p class="mat-body-2 text text-color">{{data?.abstract}}</p><br>
+            <p class="createdBy">[{{data?.byline}}]</p>
         </div>
     </div>
-</div>
-<div mat-dialog-actions fxLayoutAlign="end end">
-    <button type="button" mat-raised-button color="warn" [mat-dialog-close]>
-        Close
-    </button>
 </div>
