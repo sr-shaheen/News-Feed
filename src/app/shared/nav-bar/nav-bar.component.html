@@ -1,4 +1,5 @@
 <p>
+
     <mat-toolbar color="primary" class="app-toolbar">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
             <mat-icon>rss_feed</mat-icon>
@@ -21,4 +22,8 @@
             Arts
         </button>
     </mat-toolbar>
+
+</p>
+<p>
+    <mat-progress-bar *ngIf="isLoading$ | async" class="progress" mode="indeterminate"></mat-progress-bar>
 </p>

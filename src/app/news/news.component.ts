@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NewsDetailsComponent } from '../news-details/news-details.component';
 import { IndexDBService } from '../services/index-db.service';
+import { AsyncService } from '../shared/services/async.service';
 
 @Component({
   selector: 'app-news',
@@ -15,10 +16,12 @@ export class NewsComponent implements OnInit {
   constructor(
     private iDB: IndexDBService,
     private router: Router,
+    private asyncService: AsyncService,
     public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
+    this.asyncService.start();
     this.iDB
       .getData('news')
       .then((res) => {
@@ -38,9 +41,11 @@ export class NewsComponent implements OnInit {
         } else {
           this.items = [];
         }
+        this.asyncService.finish();
       })
       .catch((err) => {
         this.items = [];
+        this.asyncService.finish();
       });
   }
 
@@ -49,7 +54,7 @@ export class NewsComponent implements OnInit {
       width: '900px',
       height: '450px',
       data: news,
-      panelClass:'icon-outside',
+      panelClass: 'icon-outside',
     });
 
     dialogRef.afterClosed().subscribe((result) => {

@@ -11,18 +11,29 @@ import { SharedModule } from './shared/shared.module';
 import { NewsComponent } from './news/news.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 
+import { AsyncService } from './shared/services/async.service';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
+import { AsyncState } from './shared/state/async.state';
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+// import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
+// import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 
 @NgModule({
   declarations: [AppComponent, NewsComponent, NewsDetailsComponent],
   imports: [
     BrowserModule,
+    NgxsModule.forRoot([AsyncState], {
+      developmentMode: !environment.production,
+    }),
+    NgxsStoragePluginModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
   ],
-  providers: [IndexDBService, DeveloperHttpService],
+  providers: [IndexDBService, DeveloperHttpService, AsyncService],
   bootstrap: [AppComponent],
-  entryComponents:[NewsDetailsComponent]
+  entryComponents: [NewsDetailsComponent],
 })
 export class AppModule {}

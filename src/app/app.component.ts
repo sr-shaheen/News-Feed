@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { forkJoin, Subscription } from 'rxjs';
 import { DeveloperHttpService } from './services/developer-http.service';
 import { IndexDBService } from './services/index-db.service';
+import { AsyncService } from './shared/services/async.service';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +12,11 @@ import { IndexDBService } from './services/index-db.service';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'newsFeed';
   serviceSub: Subscription;
-  items: any;
 
   constructor(
     private service: DeveloperHttpService,
-    private iDB: IndexDBService
+    private iDB: IndexDBService,
+    private asyncService: AsyncService
   ) {}
   ngOnInit(): void {
     let art = this.service.artsNews();
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
     let us = this.service.usNews();
     let science = this.service.scienceNews();
     let wrold = this.service.worldNews();
-
+    this.asyncService.start();
     this.serviceSub = forkJoin([home, wrold, us, science, art]).subscribe(
       (results) => {
         let dataFormet = {
@@ -37,10 +38,16 @@ export class AppComponent implements OnInit, OnDestroy {
         this.iDB
           .addData(dataFormet, 'news')
           .then((res) => {
+            this.asyncService.finish();
             console.log(res, 'saved');
           })
-          .catch((err) => console.log(err, 'error'));
-        this.items = results[0];
+          .catch((err) => {
+            this.asyncService.finish();
+            console.log(err, 'error');
+          });
+      },
+      (error) => {
+        this.asyncService.finish();
       }
     );
   }
