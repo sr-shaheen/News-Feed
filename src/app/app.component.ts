@@ -39,11 +39,11 @@ export class AppComponent implements OnInit, OnDestroy {
           .addData(dataFormet, 'news')
           .then((res) => {
             this.asyncService.finish();
-            console.log(res, 'saved');
+            console.log(res, 'Data saved');
           })
           .catch((err) => {
             this.asyncService.finish();
-            console.log(err, 'error');
+            console.log(err, 'Data not saved');
           });
       },
       (error) => {

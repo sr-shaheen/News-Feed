@@ -16,8 +16,6 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { AsyncState } from './shared/state/async.state';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
-// import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
-// import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 
 @NgModule({
   declarations: [AppComponent, NewsComponent, NewsDetailsComponent],

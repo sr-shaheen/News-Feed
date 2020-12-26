@@ -7,7 +7,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./news-details.component.scss'],
 })
 export class NewsDetailsComponent implements OnInit {
-
   defaultImage = '/assets/nytimes.jpg';
   constructor(
     public dialogRef: MatDialogRef<NewsDetailsComponent>,
@@ -15,7 +14,7 @@ export class NewsDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.data, 'daaaaaaaaaaaaataaaaaaaaaa');
+    console.log(this.data);
   }
 
   close = (): void => {
