@@ -9,6 +9,9 @@
     <div class="detailContainer">
         <div class="typeTitle">
             <div class="mat-title text">{{data?.title}}</div>
+            <p class="createdBy">
+                <mat-icon>person_outline</mat-icon> {{data?.byline}} <span class="geo"> - {{data?.geo_facet[0]}}</span>
+            </p>
             <p class="date">
                 <mat-icon>timer</mat-icon> {{data?.published_date | date :'short'}}
             </p>
@@ -16,7 +19,6 @@
         <mat-divider></mat-divider>
         <div class="typeBody">
             <p class="mat-body-2 text text-color">{{data?.abstract}}</p><br>
-            <p class="createdBy">[{{data?.byline}}]</p>
         </div>
     </div>
 </div>

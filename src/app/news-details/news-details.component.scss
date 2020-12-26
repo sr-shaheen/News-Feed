@@ -33,9 +33,14 @@
   font-weight: lighter;
 }
 .createdBy {
+  color: rgb(66, 65, 65);
+  font-weight: normal;
+}
+.geo {
   color: gray;
+  font-style: italic;
+  font-size: small;
   font-weight: lighter;
-  text-align: right;
 }
 
 .material-icons {
